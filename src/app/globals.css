@@ -1,42 +1,31 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+@theme {
+  --color-bg: #0E0E12;          /* fundo principal */
+  --color-bg-card: #1C1C24;     /* fundo de cards/caixas */
+  --color-text: #F8F9FA;        /* texto principal */
+  --color-text-muted: #B5B5C5;  /* texto secundário */
+
+  --color-primary: #E63946;     /* títulos, botões principais */
+  --color-primary-hover: #FF6B81;
+
+  --color-accent-gold: #FFD166; /* detalhes, botões secundários */
+  --color-accent-blue: #4361EE; /* botões ghost, links, mistério */
+
+  --color-border: rgba(255,255,255,0.1);
+  --color-shadow: rgba(0,0,0,0.4);
+
+  --font-title: 'Cinzel', serif;
+  --font-body: 'Crimson Pro', serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  font-family: 'Crimson Pro', serif;
+  font-weight: 400;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
 }
