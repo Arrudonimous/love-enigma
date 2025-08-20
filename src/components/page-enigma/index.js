@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { toast } from 'react-hot-toast'
 
 export default function EnigmaComponent({ correctResponse, enigmaNumber, enigmaTitle, enigmaCardText, isEnigmaNumberWrong }) {
   const [response, setResponse] = useState('')
@@ -21,7 +22,7 @@ export default function EnigmaComponent({ correctResponse, enigmaNumber, enigmaT
 
 
         {enigmaCardText && (
-          <div className="rounded-2xl flex items-center justify-center bg-[#1C1C24] mb-24 p-2">
+          <div className="rounded-2xl flex items-center justify-center bg-[#1C1C24] mb-12 p-2">
             {enigmaCardText}
           </div>
         )}
@@ -41,6 +42,9 @@ export default function EnigmaComponent({ correctResponse, enigmaNumber, enigmaT
           const ok = (response ?? "").trim().toLowerCase() === correctResponse;
           if (!ok) {
             e.preventDefault();
+            toast.error('Resposta errada')
+          } else {
+            toast.success('Resposta certa')
           }
         }}
       >

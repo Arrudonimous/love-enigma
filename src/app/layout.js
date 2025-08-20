@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 export const metadata = {
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
       <body className="h-[100vh] bg-[#0E0E12] text-[#F8F9FA] p-8 flex flex-col">
         {children}
       </body>
+      <Toaster />
     </html>
   );
 }
